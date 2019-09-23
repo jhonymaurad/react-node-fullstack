@@ -24,6 +24,7 @@ app.use(passport.session());
 
 const authRoutes = require('./routes/authRoutes');
 const billingRoutes = require('./routes/billingRoutes');
+const surveyRoutes = require('./routes/surveyRoutes');
 
 if (process.env.NODE_ENV === 'production') {
   // Express will serve up production assets like our main.js file, or main.css file!
@@ -37,6 +38,7 @@ if (process.env.NODE_ENV === 'production') {
 
 authRoutes(app);
 billingRoutes(app);
+surveyRoutes(app);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
